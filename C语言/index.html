@@ -1,0 +1,327 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#FFF"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"><link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="alternate" type="application/rss+xml" href="https://github.com/Greg267/rss.xml"><link rel="alternate" type="application/atom+xml" href="https://github.com/Greg267/atom.xml"><link rel="alternate" type="application/json" href="https://github.com/Greg267/feed.json"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext"><link rel="stylesheet" href="/css/app.css?v=0.2.5"><link rel="canonical" href="https://github.com/Greg267/C%E8%AF%AD%E8%A8%80/"><title>C 语言 | Greg yang =</title><meta name="generator" content="Hexo 6.2.0"></head><body itemscope itemtype="http://schema.org/WebPage"><div id="loading"><div class="cat"><div class="body"></div><div class="head"><div class="face"></div></div><div class="foot"><div class="tummy-end"></div><div class="bottom"></div><div class="legs left"></div><div class="legs right"></div></div><div class="paw"><div class="hands left"></div><div class="hands right"></div></div></div></div><div id="container"><header id="header" itemscope itemtype="http://schema.org/WPHeader"><div class="inner"><div id="brand"><div class="pjax"><h1 itemprop="name headline">C 语言</h1><div class="meta"><span class="item" title="创建时间：2022-05-12 15:28:50"><span class="icon"><i class="ic i-calendar"></i> </span><span class="text">发表于</span> <time itemprop="dateCreated datePublished" datetime="2022-05-12T15:28:50+08:00">2022-05-12</time> </span><span class="item" title="本文字数"><span class="icon"><i class="ic i-pen"></i> </span><span class="text">本文字数</span> <span>20k</span> <span class="text">字</span> </span><span class="item" title="阅读时长"><span class="icon"><i class="ic i-clock"></i> </span><span class="text">阅读时长</span> <span>18 分钟</span></span></div></div></div><nav id="nav"><div class="inner"><div class="toggle"><div class="lines" aria-label="切换导航栏"><span class="line"></span> <span class="line"></span> <span class="line"></span></div></div><ul class="menu"><li class="item title"><a href="/" rel="start">Greg yang</a></li></ul><ul class="right"><li class="item theme"><i class="ic i-sun"></i></li><li class="item search"><i class="ic i-search"></i></li></ul></div></nav></div><div id="imgs" class="pjax"><ul><li class="item" data-background-image="https://tva3.sinaimg.cn/large/008qflI6ly8h25fy4pwdmj30dw0813zq.jpg"></li><li class="item" data-background-image="https://tva3.sinaimg.cn/large/008qflI6ly8h25g9pl9l2j308c05jaab.jpg"></li><li class="item" data-background-image="https://tva3.sinaimg.cn/large/008qflI6ly8h25fy4pwdmj30dw0813zq.jpg"></li><li class="item" data-background-image="https://tva3.sinaimg.cn/large/008qflI6ly8h25g83b2kjj308c05kglo.jpg"></li><li class="item" data-background-image="https://tva3.sinaimg.cn/large/008qflI6ly8h25g82ocylj308c04pq2u.jpg"></li><li class="item" data-background-image="https://tva3.sinaimg.cn/large/008qflI6ly8h25g8wfjy3j308c04tmx2.jpg"></li></ul></div></header><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"/><use xlink:href="#gentle-wave" x="48" y="3"/><use xlink:href="#gentle-wave" x="48" y="5"/><use xlink:href="#gentle-wave" x="48" y="7"/></g></svg></div><main><div class="inner"><div id="main" class="pjax"><div class="article wrap"><div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList"><i class="ic i-home"></i> <span><a href="/">首页</a></span></div><article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN"><link itemprop="mainEntityOfPage" href="https://github.com/Greg267/C%E8%AF%AD%E8%A8%80/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="image" content="/images/avatar.jpg"><meta itemprop="name" content="Greg yang"><meta itemprop="description" content=", "></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content=""></span><div class="body md" itemprop="articleBody"><p>必修科目，折磨无比</p><h2 id="7基本数据类型"><a class="anchor" href="#7基本数据类型">#</a> 7. 基本数据类型</h2><h3 id="71整型"><a class="anchor" href="#71整型">#</a> 7.1. 整型</h3><p><img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E6%95%B4%E5%9E%8B.png" alt=""></p><p>short 表示长度也就是大小比较小的数字，long 则相反，signed 表示有符号 (正负号) 的数字，unsigned 表示无符号数字，数字默认是有符号的</p><p><img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E6%95%B4%E5%9E%8B%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA.png" alt=""> <img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E6%95%B4%E5%9E%8B%E7%9A%84%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA.png" alt=""> <img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E6%95%B4%E5%9E%8B%E7%9A%84%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA1.png" alt=""></p><h3 id="72浮点型"><a class="anchor" href="#72浮点型">#</a> 7.2. 浮点型</h3><p><img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E6%B5%AE%E7%82%B9%E6%95%B0%E7%B1%BB%E5%9E%8B.png" alt=""></p><p>float 用于精度没那么高的数，double 用于精度更高的数，long double 用于精度更高的数，但没那么常用。单精度 32 位，双精度 (double) 64 位，浮点数以科学计数法存储，每一个数都由符号，指数和小数三部分组成，符号占一个比特，指数部分占 8 个比特，小数部位占 23 位，当要用到小数时，要确定小数的精度，如果想要精度更高的话，则需在声明变量时用 doubl 变量名 的格式</p><h4 id="浮点型常量"><a class="anchor" href="#浮点型常量">#</a> 浮点型常量</h4><p>小数形式；必须有小数点，如 3.14 -12.5 等</p><p>指数形式：数字 e (E) 指数部分 如 3.14e-3 2.57e8 等</p><p>浮点型常量通常以 double 类型存放，如果想以单精度存放，则在数字后加 F 或 f，如果想以 long double 类型存放，则在数字后加 L 或 l</p><p><img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E6%B5%AE%E7%82%B9%E5%9E%8B%E7%9A%84%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA.png" alt=""></p><h3 id="73字符型"><a class="anchor" href="#73字符型">#</a> 7.3. 字符型</h3><p>用 char 声明变量，赋值时要给值加上单引号，当计算机中出现字符时，C 语言只是使用它对应的整数值</p><p>char 的类型：signed char 有符号的 char 表示范围 - 128~127;unsigned char 表示范围 0~255</p><h4 id="a转义序列"><a class="anchor" href="#a转义序列">#</a> a. 转义序列</h4><p>分为两种，一种是字符转义，就是平常用的 \n \a (响铃) 这种，但它的局限性在于它并没有把所有不可打印的字符涵盖进去</p><p><img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E5%AD%97%E7%AC%A6%E8%BD%AC%E4%B9%89%E5%BA%8F%E5%88%97.png" alt=""></p><p>另一种是数字转义序列，可以涵盖所有的不可打印的字符<img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E8%BD%AC%E4%B9%89%E5%BA%8F%E5%88%97.png" alt=""></p><h4 id="b读写字符"><a class="anchor" href="#b读写字符">#</a> b. 读写字符</h4><p>scanf</p><p><img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E8%AF%BB%E5%86%99%E5%AD%97%E7%AC%A6.png" alt=""></p><p>注意，scanf 函数读取字符时不会跳过空白字符</p><p><img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E8%AF%BB%E5%86%99%E5%AD%97%E7%AC%A6%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.png" alt=""></p><p>getchar 和 putchar</p><p><img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/getchar%E5%92%8Cputchar.png" alt=""> **</p><p>注意两个单独，putchar 输出单独一个字符，getchar 读取单独一个字符，且 getchar 读取时不会跳过空白</p><p>**</p><p>一些运用：getchar 可以直接用于控制循环的表达式中，如遇到空格时循环终止，则代码可以是 while (getchar ()!='');getchar 也可用于在循环中搜寻字符，也可用于跳过不确定数量的相同字符或空格</p><h3 id="74类型转换"><a class="anchor" href="#74类型转换">#</a> 7.4. 类型转换</h3><p><img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E7%B1%BB%E5%9E%8B.png" alt=""></p><h4 id="a隐式转换"><a class="anchor" href="#a隐式转换">#</a> a. 隐式转换</h4><p><img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF.png" alt=""></p><p>算术转换：常用算术转换常用于二元运算符的操作数上；</p><p>转换规则：较低级转向较高级，即所谓的提升；</p><p>若任一数据类型是浮点型，则把数据类型都转换为数据中存在的最高精度的浮点型；float&lt; double&lt; long double</p><p>若所有数据类型均不为浮点数，则把所有的数据类型转换为数据中存在的最高精度整数类型；int&lt; unsigned int&lt; long int&lt; unsigned long int</p><p>赋值中的类型转换规则：把赋值运算符右侧表达式的值转换为左侧变量的类型</p><p>注意：浮点数赋值给整型变量会去掉该数的小数部分；若表达式的值超出了变量类型的范围，则会得到预期以外的结果；如果将一个浮点常量赋值给一个 float 变量，最好在改常量后加一个后缀 f</p><h4 id="b强制类型转换"><a class="anchor" href="#b强制类型转换">#</a> b. 强制类型转换</h4><p>表示类型：(类型) 变量或 (类型)(表达式)</p><h3 id="75类型定义"><a class="anchor" href="#75类型定义">#</a> 7.5. 类型定义</h3><p>类型定义用于对另一个数据类型创建一个别名</p><p>语法规则：typedef type declaration; type 就是 int float 等，declaration 就是别名，自己取的</p><p>注意：一个类型定义声明并没有创建一个新的类型，仅仅是对某个已有的类型增加一个新名称而已</p><p>类型定义可以使代码更容易理解，当对数据类型定义后，在后面的代码中就可以使用别名来代替数据类型，如创建两个变量表示身高，一般用法 float a，b； 但当我们 typedef float height; 之后，我们就可以这样 height a,b; 效果一样，但比前面的那种更好理解； 类型定义还可以使修改数据的类型更加容易，如我们先 typedef int number; 这时的 number 是 int，但当 int 的位数不够时，我们则需要修改数据类型，就可以直接把 int 改成更高精度的 int，如 unsigned int , long int</p><h3 id="76sizeof运算符"><a class="anchor" href="#76sizeof运算符">#</a> 7.6.sizeof 运算符</h3><p>sizeof 是取数据类型、常量、变量或者表达式值的存储长度的运算符 (以字节为单位)； 语法规则：sizeof (数据类型说明符 / 表达式)；如 sizeof (int),sizeof (i+j)</p><h2 id="8数组"><a class="anchor" href="#8数组">#</a> 8. 数组</h2><h3 id="81一维数组"><a class="anchor" href="#81一维数组">#</a> 8.1. 一维数组</h3><p>数组是含有多个数据值的数据结构，每个数据值具有相同的数据类型；这些数据值被称为元素；数组内可以根据元素所处的位置对其进行单独访问；简而言之，数组是相同性质的一组数据的组合，数组元素的数据类型相同，个数确定.</p><p>声明一个数组：类型定义符 数组名 [常量表达式]，常量表达式是数组元素的个数，元素索引从 0 开始</p><h3 id="82数组的初始化"><a class="anchor" href="#82数组的初始化">#</a> 8.2. 数组的初始化</h3><p>数组可在声明时赋值，获得一个初始值，格式为 数据类型定义 arr [数组元素个数]{数组元素，用逗号隔开}，若赋的数组元素少于 [] 中的数量，则少的数字默认为 0</p><p>指定初始化式：一个数组里面只有几个数要赋值，其他都为 0，则可采用指定初始化赋值，格式为 数据类型定义 arr [数组元素个数]{[n]= 元素，[i]= 元素，[j]= 元素，...}，表示数组内的第 n+1，i+1.j+1 个元素自己定义，其他全为 0</p><p>小技巧：用数组的大小除以数组元素的大小可以得到数组的长度 sizeof (a) /sizeof (a [0]) sizeof 是获取数组的字节总数，用字节总数除单个元素的字节长度，即可得到数组的长度，这个经常用到。但 sizeof 返回的是无符号整型，无符号整型和有符号整型比较是很危险的，所以我们要将 sizeof (a) /sizeof (a [0]) 强制转换为有符号整数，格式为 (int)(sizeof (a) /sizeof (a [0]))</p><h3 id="83二维数组"><a class="anchor" href="#83二维数组">#</a> 8.3. 二维数组</h3><p><img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84.png" alt=""> <img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%841.png" alt=""></p><p>二维数组按照行主序存储数组，从第 0 行开始顺序存储，接着第一行，如此下去</p><h3 id="84字符数组"><a class="anchor" href="#84字符数组">#</a> 8.4. 字符数组</h3><p><img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E5%AD%97%E7%AC%A6%E6%95%B0%E7%BB%84.png" alt=""> **</p><p>注意：用字符串常量初始化时，自动加结束标志 \0</p><p>**</p><p>字符数组的输入输出</p><p><img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E5%AD%97%E7%AC%A6%E6%95%B0%E7%BB%84%E7%9A%84%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA.png" alt=""></p><p>二维字符数组，和二维数组用法规则一样</p><p>一些相关知识</p><p><img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BF%9E%E6%8E%A5%E5%87%BD%E6%95%B0.png" alt=""></p><p><img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%B7%E8%B4%9D%E5%87%BD%E6%95%B0.png" alt=""></p><p>注意：字符串拷贝函数会将数组二的内容<strong>替换</strong>数组一的内容，空字符为 '\0'</p><p><img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%AF%94%E8%BE%83%E5%87%BD%E6%95%B0.png" alt=""></p><p><img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E6%B5%8B%E8%AF%95%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%95%BF%E5%BA%A6%E5%87%BD%E6%95%B0.png" alt=""></p><h2 id="9函数"><a class="anchor" href="#9函数">#</a> 9. 函数</h2><h3 id="91函数的定义和调用"><a class="anchor" href="#91函数的定义和调用">#</a> 9.1. 函数的定义和调用</h3><h4 id="911函数构造"><a class="anchor" href="#911函数构造">#</a> 9.1.1 函数构造</h4><p><img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E5%87%BD%E6%95%B0.png" alt=""></p><p>格式<img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E5%87%BD%E6%95%B0%E6%A0%BC%E5%BC%8F.png" alt=""></p><p>每个形式参数需要说明其类型；形式参数间用逗号进行分隔。 如果函数没有形式参数，那么在圆括号内应该出现 void，或者什么都不写</p><p>函数体内声明的变量专属于此函数，其他函数不能对这些变量进行检查或修改。</p><h4 id="922函数调用"><a class="anchor" href="#922函数调用">#</a> 9.2.2 函数调用</h4><p><img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8.png" alt=""></p><p>Tips：1. 如果函数有参数，那么调用时实际参数前不能加类型 2. 调用时函数前也不能加返回类型</p><h3 id="92函数声明和实际参数"><a class="anchor" href="#92函数声明和实际参数">#</a> 9.2. 函数声明和实际参数</h3><h4 id="921函数声明"><a class="anchor" href="#921函数声明">#</a> 9.2.1. 函数声明</h4><p>当函数构造在函数调用之后时，编译器第一次遇到函数调用时，会自动给函数一个隐式声明，定义函数的数据类型，当后面遇到函数构造时则会报错，所以函数构造要在函数调用之前，但这不现实，所以因此有了函数声明，它可以让编译器先对函数有个初步的了解，当后面遇到函数构造时才不会报错</p><p>格式：返回类型 函数名 (形式参数) ;</p><h4 id="922实际参数"><a class="anchor" href="#922实际参数">#</a> 9.2.2. 实际参数</h4><p>函数在被调用时要给出实际参数，实际参数将值复制给形参，自身的值不会受到函数内部的影响</p><p>9.2.2.1. 实际参数的转换</p><p><img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E5%AE%9E%E9%99%85%E5%8F%82%E6%95%B0%E7%9A%84%E8%BD%AC%E6%8D%A2.png" alt=""></p><p>9.2.2.2. 数组型实际参数</p><p>1. 数组可以作为函数的参数，当形式参数是一维数组时，可以不说明数组的长度 2. 在把数组名传递给函数时，不要在数组名的后边放置方括号 3. 改变数组形参就能改变数组实参 4. 如果形式参数是多维数组，则只有第一维的长度可以省略</p><h3 id="93函数返回和程序终止"><a class="anchor" href="#93函数返回和程序终止">#</a> 9.3. 函数返回和程序终止</h3><h4 id="931函数返回"><a class="anchor" href="#931函数返回">#</a> 9.3.1. 函数返回</h4><p>函数在完成的时候，需要返回到调用它的地方，这时需要用到 return 语句</p><p>格式如下：return [表达式];</p><p>tips：1. 表达式是可选的，只有非 void 返回类型的函数必须有，否则就不应该有。2. 如果表达式的类型和函数的返回类型不匹配，那么系统将会把表达式的类型隐式转换成返回类型；3. 在 void 返回类型的函数中，如果 return 语句是最后一条，那么这条 return 语句是可以忽略的</p><h4 id="932程序终止"><a class="anchor" href="#932程序终止">#</a> 9.3.2. 程序终止</h4><p>在 main 函数中执行 return 会终止程序</p><p>exit 函数</p><p><img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/exit%E5%87%BD%E6%95%B0.png" alt=""></p><h3 id="94函数递归"><a class="anchor" href="#94函数递归">#</a> 9.4. 函数递归</h3><p>在特殊的场合，一个函数可以自己调用自己，那么此函数就是递归的，如计算某个数的阶乘，或某种行为多次重复运用</p><h2 id="10程序结构和变量作用域"><a class="anchor" href="#10程序结构和变量作用域">#</a> 10. 程序结构和变量作用域</h2><h3 id="101局部变量"><a class="anchor" href="#101局部变量">#</a> 10.1. 局部变量</h3><p>在函数体内声明的变量称为该函数的局部变量</p><p>局部变量的作用域是从变量声明的点开始一直到所在函数体的末尾。</p><h4 id="1011静态局部变量"><a class="anchor" href="#1011静态局部变量">#</a> 10.1.1. 静态局部变量</h4><p>在局部变量声明中放置单词 static 可以使变量具有静态存储期限 。拥有静态储存期限的变量可以拥有永久的存储单位，所以在整个程序执行期间都会保留变量的值，静态局部变量仍然具有块作用域特性，所以它对于其他函数是不可见的</p><h4 id="1012形式参数"><a class="anchor" href="#1012形式参数">#</a> 10.1.2. 形式参数</h4><p>形式参数拥有和局部变量一样的性质：自动存储期限和块作用域，每次调用函数时，对形式参数自动进行初始化 (通过赋值获得相应的实际参数的值)</p><h3 id="102外部变量"><a class="anchor" href="#102外部变量">#</a> 10.2. 外部变量</h3><p>外部变量是声明在任何函数体外的，也被叫做全局变量，可以被所有函数访问，拥有静态存储期限和文件作用域 (变量的可见范围从变量被声明的点开始一直到所在文件的末尾)</p><p>栈：可以存储具有相同数据类型的多个数据项 (与数组相似)</p><p>对栈的操作：压栈 (push)：在栈顶加入一个数据项；出栈 (pop): 从栈顶删除一个数据项</p><p>对栈里的数据项进行处理时只能处理栈顶的数据项，不能处理其他位置的数据项，且处理时要将栈顶的数据项读取出来处理，不能在栈里处理</p><p>外部变量的利与弊：在多个函数必须共享一个变量时，或少数几个函数需要共享大量变量时，采用外部变量十分方便，然而在多数情况下，在函数间通过形式参数进行通信比通过共享变量的方法更好，且在函数中运用外部变量时最好运用目的相同</p><h3 id="103程序块"><a class="anchor" href="#103程序块">#</a> 10.3. 程序块</h3><p>{statements}，在花括号里的复合语句，我们称之为代码块，函数体就是一个程序块</p><h4 id="104作用域"><a class="anchor" href="#104作用域">#</a> 10.4. 作用域</h4><p>在程序块内可以修改外部变量，但在程序块结束时，外部变量的值会重新恢复到以前的含义</p><h4 id="105构建c程序"><a class="anchor" href="#105构建c程序">#</a> 10.5. 构建 C 程序</h4><p><img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E6%9E%84%E5%BB%BAC%E7%A8%8B%E5%BA%8F%E9%A1%BA%E5%BA%8F.png" alt=""></p><p>注释的注意事项</p><p><img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E6%B3%A8%E9%87%8A.png" alt=""></p><h2 id="11指针"><a class="anchor" href="#11指针">#</a> 11. 指针</h2><h3 id="111指针的基本概念"><a class="anchor" href="#111指针的基本概念">#</a> 11.1. 指针的基本概念</h3><p>背景知识</p><p><img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E6%8C%87%E9%92%88%E8%83%8C%E6%99%AF%E7%9F%A5%E8%AF%86.png" alt=""></p><p>每个字节有唯一的地址，程序中的每个变量占有一个或多个字节内存，将第一个字节的地址称为变量的地址</p><p>我们可以用一种特殊的指针变量来存储内存地址，当采用指针变量 p 来存储变量 i 的地址时，我们通常说 p “指向” i。指针变量就是存贮地址的特殊变量</p><p>当声明一个指针变量时，变量名前必须加 *；声明的指针变量 p 指向一个对象 (是对象而不是变量，因为 p 可以指向不属于变量的内存区域)</p><h4 id="1111取址运算符和间接寻址运算符"><a class="anchor" href="#1111取址运算符和间接寻址运算符">#</a> 11.1.1. 取址运算符和间接寻址运算符</h4><p><img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E6%8C%87%E9%92%88%E8%BF%90%E7%AE%97%E7%AC%A6.png" alt=""></p><p>注意使用指针变量前一定要对其初始化，也就是赋值</p><p>若指针变量指向了某个对象，可以使用 * 访问存储在该对象中的内容，如 int i,*p;p=&amp;i; 此时，*p 就与 i 等价，改变 * p 的值，同时也会改变 i 的值</p><p>注：不能将间接寻址运算符运用于未初始化的变量</p><p>指针里的 * 和 &amp;：一个变量 a 含有两种意思，存储单元的地址和存储单元中的数据，为了消除这种二异性，C 语言规定 a 代表存储单元里的数据，&amp;a 代表存储单元的地址，如像 a=&amp;b，则是将 b 的地址给了 a，*a 代表 a 中存储地址对应的存储单元中的数据</p><h3 id="112指针用做函数参数与返回值"><a class="anchor" href="#112指针用做函数参数与返回值">#</a> 11.2. 指针用做函数参数与返回值</h3><p>指针用作参数用途 1：帮助输出函数运行结果；原理：指针所指向的对象的值可以在函数中被修改</p><p>用途 2：传入指针而非变量提高传参效率，使用 const 关键字确保函数不会修改指针参数所指向的对象</p><p>指针也可作为返回值：可以是作为实参传入的指针，可以是指向外部变量的指针，也可以是指向声明为 static 的局部变量的指针：但不可以是指向自动局部变量的指针，因为函数返回时此类变量不复存在</p><p>指针可以指向数组元素：设 a 为数组，则 &amp; a [i] 为指向数组 a 中元素 i 的指针</p><h3 id="113指针的算数运算"><a class="anchor" href="#113指针的算数运算">#</a> 11.3. 指针的算数运算</h3><p>c 语言支持三种类型的指针算术运算：指针加上整数；指针减去整数；两个指针相减</p><p>注：不能对一个并未指向数组元素的指针执行算术运算：不能当两个指针并非指向同一数组中的元素时，对其执行减法操作</p><p>指针可以采用关系运算符和判等运算符进行比较，只有两个指针指向同一数组（中的元素）时，指针比较才有意义</p><h3 id="114指针用于数组处理"><a class="anchor" href="#114指针用于数组处理">#</a> 11.4. 指针用于数组处理</h3><p>可用于遍历数组并对数组的元素进行某种操作，因为指针既可访问数组元素的地址，用来防止越界，又可修改数组元素</p><p>* 和 ++ 通常结合使用</p><p><img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E8%BF%90%E7%AE%97%E7%AC%A6%E7%BB%93%E5%90%88.png" alt=""></p><h3 id="115用数组名作为指针"><a class="anchor" href="#115用数组名作为指针">#</a> 11.5. 用数组名作为指针</h3><p>允许使用数组名作为指向数组第一个元素的指针，如 int a [10] *a=1;, 表示 a [0]=1：尽管数组名可以用作指针，但绝不能对其赋值，可以先将数组名赋给其他指针，再对该指针进行赋值</p><p>对于形参而言，声明为数组等同于声明为指针</p><p>保护数组型实参，在形参声明时加上 const 关键字</p><p>向函数传递数组所需的时间与数组的大小无关</p><p>指针也可用作数组名</p><h3 id="115指针于多维数组"><a class="anchor" href="#115指针于多维数组">#</a> 11.5. 指针于多维数组</h3><p>当我们给二维数组循环赋值时，通常采用两个循环，一个循环列，一个循环行，但当我们把二维数组赋值给指针 p 时，我们只需要让 p 自增，并且 p &lt;=&amp;a [i][j], 就可以了，可以看作把二维数组当作一维数组来处理的 &lt; /p&gt;</p><p>为了访问二维数组 a 中的第 i 行元素，可以采用如下方式初始化指针 p，使之指向数组 a 中第 i 行的第 0 哥元素:p=&amp;a [i][], 或者可以简单的写为 p=a [i];</p><p><img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84%E7%9A%84%E5%A4%84%E7%90%86.png" alt=""></p><p>由于 a [i] 是指向数组 a 中第 i 行元素的指针，因此可以将其作为参数传递给一个接受一维数组作为形参的函数，换言之，以一维数组为形参的函数，同样可以接受二维数组中的一行作为参数传入</p><h3 id="116指针实际应用"><a class="anchor" href="#116指针实际应用">#</a> 11.6. 指针实际应用</h3><p>如果函数里要修改函数外的量，这时可以用指针，可以单独声明一个指针变量，然后将要修改的变量的地址指向该指针，也可以在调用函数时，实参用 &amp; 变量名 效果一样</p><p>指针的运算：int *p=&amp;a [1],*q=&amp;a [2];*(p+3) 表示 a [1] 后面的第三个元素，q-p 表示 a [2] 和 a [1] 之间的元素个数</p><p>在 for 循环里，指向同一个数组的指针只能在判断和处理条件中出现一次，如下便是错误的使用，因为前面判等的条件用了 a [n] 的地址，但后面的 a++ 使 a [n] 的地址也加一，这将会使循环永远不停止，正确做法应如下二图，先在循环外把 a [n] 的地址赋给一个指针，判等时用这个指针来判等</p><p><img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E6%8C%87%E9%92%88%E7%9A%84%E9%94%99%E8%AF%AF%E4%BD%BF%E7%94%A8.png" alt=""></p><p><img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E6%8C%87%E9%92%88%E7%9A%84%E6%AD%A3%E7%A1%AE%E7%94%A8%E6%B3%95.png" alt=""></p><h2 id="12字符串"><a class="anchor" href="#12字符串">#</a> 12. 字符串</h2><h3 id="121字符串字面量"><a class="anchor" href="#121字符串字面量">#</a> 12.1. 字符串字面量</h3><p>字符串之间可以包含转义序列，当一行字符串太长时，可以在其中加入 \ 把两行字符连成一行</p><p>当编译器遇到一个长度为 n 的字符串字面量时，会给它分配 n+1 个字节的存储空间，额外的一个是空字符，用来表示字符串的结束</p><p><img data-src="../images/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%AD%97%E9%9D%A2%E9%87%8F%E7%9A%84%E5%AD%98%E5%82%A8.png" alt=""></p><p>可以在任何 c 语言允许使用 char * 指针的地方使用字符串字面量，如 char*p;p=&quot;abc&quot;，这个操作不是把值赋值给 p 而是使 p 指向字符串中第一个字符的地址，因为 c 语言把字符串当作数组处理</p><p>c 语言允许对指针添加下标，因此可以给字符串字面量添加下标，使指向字符串中某个字符</p><p>字符串字面量是常量，不可修改或赋值操作</p><p>字符常量和字符串字面量的区别：前者是用单引号，后者用双引号，前者是以对应的 ASCⅡ 数字表示的，后者是以指针表示的，且结尾还会多一个空字符</p><h3 id="122字符串变量"><a class="anchor" href="#122字符串变量">#</a> 12.2. 字符串变量</h3><p>任何一维数组均可以用于存储字符串，此时可以把该数组看作一个字符串变量</p><p>初始化字符串变量时 (即声明一个数组并赋值)，可以不说明数组的长度，数组可以根据后面数组的长度自动调整长度</p><p>字符数组与字符指针的区别：两者均可以看作一个字符串：数组版中，存储的字符是可以修改的，指针版中，存储的字符串字面量是不可以修改的：在把指针作为字符串之前，指针必须指向一个字符数组</p><h3 id="123读写字符串"><a class="anchor" href="#123读写字符串">#</a> 12.3. 读写字符串</h3><p>如果只想显示字符串的一部分，可以使用转换说明 %.ps，这里的 p 是要显示的字符数量</p><p>写字符串可以用 printf 或 puts，printf 函数可以用 % S 转换说明符来写一个字符串；可以使用转换说明符 %.ps 来输出字符串的一部分，p 表示要显示的字符的个数；可以使用说明转换符 % ms 将显示字符串子啊 m 个字符宽度的输出域，如果字符串少于 m 个字符，字符串将在域内右对齐，在 m 的前面放置一个 - 号，可以强制字符串左对齐；puts 函数会写一个额外的新换行符</p><p>读字符串：可以用 scanf 或者 gets 一步读入单个字符串，另一种方法：一次读入一个字符；在用 scanf 读字符时，后面为变量赋值不用 &amp;，因为后面的变量是个指针；scanf 可以用 % ns，表示能够存放的最多字符数当调用 scanf 时，该函数跳过空白，然后读入字符并存入 str 指向的空间，直至遇到一个空白字符，且会存放一个空字符在字符串的后面</p><p>scanf 并不总能读一整行输入，换行符，空白和 tab 符，均导致 scanf 停止读取，要读取整行输入，可以使用 gets 函数</p><p>gets 函数的特点：读取输入不会跳过开始的空白；直到找到换行符才停止读入；不存储换行符，而用空字符代替，gets 本身是不安全的，fgets 是一个更好的选择</p><h3 id="124使用c字符串库"><a class="anchor" href="#124使用c字符串库">#</a> 12.4. 使用 C 字符串库</h3><p>数组不能用运算符进行拷贝和比较，比如用 = 赋值</p><p>赋值 (拷贝) 函数：函数原型：char*strcpy (char*s1,const char*s2), 作用 strcpy 拷贝字符串 s2 到 s1，准确的说是 strcpy 拷贝 s2 指向的字符串到 s1 指向的字符数组，该函数返回 s1 (指向目的字符串的指针)；因为该函数不知道 s1 和 s2 的大小，所以有可能 s2 的长度大于 s1，所以，此函数是不安全的；为此，我们可以用 strncpy，它需要第三个参数来限制拷贝的字符的个数 strncpy (str1,str2,sizeof (str1)), 如果 str2 的长度大于或等于 str1 数组的长度，strncpy 将保持拷贝的结果而不能给 str1 增加一个字符串结束符</p><p>数组测长度函数：函数原型 size_t strlen (const char*s), 它返回字符数组的长度，不包括空字符</p><p>字符串追加函数：函数原型：char*strcat (char*s1,const char*s2), 它的作用是追加字符串 s2 的内容到字符串 s1 的末尾，返回 s1 (指向结果字符串的指针)，但它也有 strcpy 的风险，为此我们可以采用 strncat，它也需要第三个参数来限制要拷贝的字符数。调用方法为 strncat (str1,str2,sizeof (str1)-strlen (str1)-1), 它会以一个空字符结束 str1</p><p>比较函数：函数原型为，int strcmp (const char*s1,const char*s2)。strcmp 比较字符串 s1 和 s2，根据 s1 是小于，等于或者大于 s2 来返回一个小于，等于或者大于 0 的值</p><h3 id="125字符串数组"><a class="anchor" href="#125字符串数组">#</a> 12.5. 字符串数组</h3><p>字符串数组就是将多个字符串用数组来存储管理，存储方法有很多，一种方法是采用二维数组，每行一个字符串，但每行会存在一定的空白，第二种方法是采用指针数组的方式，指针数组设为一维数组，每个元素都是一个字符串，此时，如果要调整字符串的次序，我们一般通过改变索引来改变次序</p><p>12.6.. 命令行参数</p><p>当我们在运行一个程序时，我们通常要给它传传入一些信息，命令行信息机制并不仅限于操作系统命令，任何程序都可以采用这种方式获得信息，要在我们 c 程序的开始就给它传入信息，方法为使用带参数的 main 函数</p><p>main 一般带两个参数，这两个参数通常命名为 argc 和 argv，main (int argc,char*argv [])，argc 是命令行参数的数量 (包括程序名本身)，argv 是指向命令行参数的指针数组，这些命令行参数以字符串的形式存储。argv [0] 指向程序名，而从 argv [1] 到 argv [arvc-1] 则指向余下的命令行参数</p><h2 id="13预处理"><a class="anchor" href="#13预处理">#</a> 13. 预处理</h2><h3 id="131基本概念和条件编译"><a class="anchor" href="#131基本概念和条件编译">#</a> 13.1. 基本概念和条件编译</h3><p>预处理是指在编译之前对源程序所做的处理，执行预处理工作的程序叫预处理，在早期，预处理器和编译器是分开的，现代编译器一般集成了预处理器，预处理命令也称为指示，它指示编译器如何翻译源程序</p><p>指令以井号开头，是给编译器的命令，告诉编译器如如何翻译我们的程序；语句以分号结尾，被编译器翻译为二进制程序。</p><p>文件包含：#include &lt;文件名&gt;，用于 c 语言自身库的头文件，编译器搜索系统头文件所在的目录；#include &quot;文件名&quot;</p><p>条件编译：#if、#ifdef、#ifndef、#elif、#else、#endif 指令能根据预处理器可以测试的条件来确定，是将一段文本块包含到程序中，还是将其排除在程序之外</p><p>#if #elif #elif #endif，作用为条件满足哪个 if 就编译哪个 if 后面的语句</p><p>指令总是在第一个换行符处结束，除非明确地指明要延续。如果想在下一行延续指令，我们必须在当前行的末尾使用 \，指令可以出现在程序中的任何地方，注释可以与指令放在同一行</p><h4 id="1311宏"><a class="anchor" href="#1311宏">#</a> 13.1.1. 宏</h4><p>简单的宏：宏的替换列表可以包括标识符，关键字，数值常量，字符常量，字面串，运算符和标点符号。当预处理器遇到一个宏定义时，会做一个 “标识符” 代表 “替换列表” 的记录。在文件后面的内容当中，不管标识符在那里出现，预处理器都会用替换列表代替它；不要在宏的定义中放额外的符号，不用放等号，不用放分号；</p><p>宏的作用：程序会更易读；程序会更易于修改；可以帮助避免前后不一致或键盘输入错误；可以对 c 语法做小的修改，就是说给 C 语言符号添加别名，从而改变 c 的语法，比如 #define BEGIN { ；对类型重命名；控制条件编译；以上作用中，宏定义中的替换列表为空是合法的</p><p>带参数的宏：格式为 #define 标识符 (x1,x2,x3,x4,...) 替换列表，其中，标识符和替换列表之间直接相连，不能有空格，如 #define MAX (x,y) ((x)&gt;(y))?(x):(y) , 这个就是求 x 和 y 里最大的数，带参数的宏和函数差不多，但是两者有区别，宏的调用更快，宏会使代码量变大，函数参数有类型，宏参数没有类型，宏替换之后就不存在，所以宏没有地址，也没有指向宏的指针，经常调用小的函数。为了减小调用开销，可以考虑设计为宏</p><h4 id="1312运算符"><a class="anchor" href="#1312运算符">#</a> 13.1.2.# 运算符</h4><p>#运算符将宏的一个参数转换为字面量。它仅允许出现在带参数的宏的替换列表中。如 #define PRINT_INT (n) printf (#n &quot;=% d\n&quot;,n) ，调用为 PRINT_INT (i/j), 所以这个语句实际为 printf (&quot;i/j=% d\n&quot;,i/j);</p><h4 id="1313运算符"><a class="anchor" href="#1313运算符">#</a> 13.1.3.## 运算符</h4><p>## 可以将两个记号 (如标识符)“粘合” 在一起，成为一个记号，如果其中一个操作数为宏参数，“粘合” 会在形式参数被相应的实际参数替换后发生；如 #define MK_ID (n) i##n , 调用为 MK_ID (1), 则输出为 i1；</p><h4 id="1314宏的通用属性"><a class="anchor" href="#1314宏的通用属性">#</a> 13.1.4. 宏的通用属性</h4><p>宏的替换列表可以包含对其他宏的调用；预处理器只会替换完整的记号，而不会替换记号的片段，因此，预处理器会忽略嵌在标识符，字符常量，字面串之中的宏名；宏定义的作用范围通常到出现这个宏的文件末尾；宏不可以被定义不同的两遍；宏可以使用 #undef 指令取消定义</p><h4 id="1315宏定义中的圆括号"><a class="anchor" href="#1315宏定义中的圆括号">#</a> 13.1.5. 宏定义中的圆括号</h4><p>如果宏的替换列表中有运算符，那么始终要将替换列表放在括号中；如果宏有参数，每个参数每次在替换列表中出现时都要放在圆括号中</p><h4 id="1316创建较长的宏"><a class="anchor" href="#1316创建较长的宏">#</a> 13.1.6. 创建较长的宏</h4><p>逗号运算符可以使替换列表包含一系列表达式，如 #define ECHO (s) (gets (s),puts (s)) 该宏会读入一个字符串，再把字符串显示出来</p><h4 id="1317预定义宏"><a class="anchor" href="#1317预定义宏">#</a> 13.1.7. 预定义宏</h4><p>C 语言有一些预定义宏，每个宏表示一个整型常量或字面串</p><h4 id="1318空的宏参数"><a class="anchor" href="#1318空的宏参数">#</a> 13.1.8. 空的宏参数</h4><p>c99 允许宏调用中的任意参数或所以参数为空，当然这样的调用需要有和一般调用一样多的逗号</p><h2 id="14大型程序设计"><a class="anchor" href="#14大型程序设计">#</a> 14. 大型程序设计</h2><h3 id="141编程规范"><a class="anchor" href="#141编程规范">#</a> 14.1. 编程规范</h3><p>常量名：全大写，单词之间用下划线连接；在程序使用常量时，最好通过宏定义用符号表示常量；变量名：小驼峰表示法：小写开头，后面的每个单词的首字母大写单词之间不用下划线，指针变量加前缀 p；大驼峰命名法：每个单词的首字母大写，以便区分单词，单词之间不用下划线；函数注释：分 5 行，一行写函数功能，二行写输入参数的注释，三行写输出参数的注释，四行写返回值的注释，五行写使用此函数的注意事项；源程序的格式：文件包含，常量定义，类型定义，全局变量 (最好没有)，函数声明，函数实现，主函数</p><h3 id="142结构化设计"><a class="anchor" href="#142结构化设计">#</a> 14.2. 结构化设计</h3><p>函数的结构化设计原则：高内聚：高内聚指函数内部的代码具有高凝聚力，一个函数只做一件事，函数内部没有多余的东西。松耦合：松耦合是指函数与其他函数及外部变量具有低耦合度，函数的输入输出都通过参数和返回值传递</p><h3 id="143多文件程序"><a class="anchor" href="#143多文件程序">#</a> 14.3. 多文件程序</h3><h2 id="15结构联合和枚举"><a class="anchor" href="#15结构联合和枚举">#</a> 15. 结构，联合和枚举</h2><h3 id="151结构概述声明与初始化"><a class="anchor" href="#151结构概述声明与初始化">#</a> 15.1. 结构概述，声明与初始化</h3><h4 id="1511结构变量的声明"><a class="anchor" href="#1511结构变量的声明">#</a> 15.1.1. 结构变量的声明</h4><p>结构的元素 (也叫成员) 可能具有不同的类型，每个成员都有名字，因此为了选择特点的结构成员需要指明结构成员的名字而不是他的位置，例如想要声明一个仓库中某种零件的编号，零件的名称，零件的个数，结构声明:</p><pre><code>                            struct&#123;
+                                int number；
+                                char name；
+                                int on\_hand；
+                                ...;
+                            &#125;part1，part2，
+                                        
+</code></pre><p>part1,part2 是具有这种类型的变量。每个结构代表一种新的作用域，任何在此作用域内的名字都不会和程序中的其他冲突</p><h4 id="1512结构变量的初始化"><a class="anchor" href="#1512结构变量的初始化">#</a> 15.1.2. 结构变量的初始化</h4><p>结构变量可以在声明的时候初识化，只需要在 part1 后面加上 {528,&quot;disk drive&quot;,10}, 大括号里的数据与 struct 里的声明一一对应，如果 part1 里面的数据少于声明，则剩下的声明为 0，字符数组声明为空字符串</p><h4 id="1513指示器"><a class="anchor" href="#1513指示器">#</a> 15.1.3. 指示器</h4><p>可以在 part1 里面的括号里用.number=528, 这种形式来给成员赋值，并且这种方式不用在意赋值的顺序</p><h3 id="152对结构的操作"><a class="anchor" href="#152对结构的操作">#</a> 15.2. 对结构的操作</h3><p>访问结果内的成员，采用 part1.number 这种形式，且 part1.number 可以被赋值，也可以自增自减，也可以 part1=part2，将 part2 里面对应的成员的数据赋给 part1, 但进行这种操作的两个变量应该是兼容的，也就是同时声明的，即里面的成员和顺序一样，但不能用 == 和！= 来判断两个结构是否相等</p><h3 id="153结构类型"><a class="anchor" href="#153结构类型">#</a> 15.3. 结构类型</h3><p>当在程序中的不同位置声明一样的结构时，会出现问题，且声明出来的结构后面的变量不是同一种类型的，不能兼容，且这些变量的类型都没有名字，所以也不能把他们用作函数调用的参数。为了克服这些困难，需要定义表示结构类型的名字，可以声明结构标记，也可以用 typedef 来定义类型名</p><h4 id="1531结构标记的声明"><a class="anchor" href="#1531结构标记的声明">#</a> 15.3.1. 结构标记的声明</h4><p>结构标记是用于标识某种特点结构的名字，如下面的例子声明了名为 part 的结构标记:</p><pre><code>                            struct part &#123;
+                                int number;
+                                char name;
+                                int on\_hand;
+                            &#125;；
+                                            
+</code></pre><p>，注意右花括号的分号是必不可少的；一旦创建了标记，就可以用它来声明变量了，如 struct part part1,part2;, 注意 struct 不能省略，且 part 是结构标记，不会与变量名冲突，标记的声明可以和结构变量的声明可以放在一起</p><h4 id="1532结构类型的定义"><a class="anchor" href="#1532结构类型的定义">#</a> 15.3.2. 结构类型的定义</h4><p>如</p><pre><code>                            typedef struct &#123;
+                                int number; 
+                                char name; 
+                                int on\_hand;
+                            &#125;part;
+                                            
+</code></pre><p>，注意类型 part 的名字必须出现在定义的末尾，定义了结构类型后就可以用它来声明变量了，如 part part1,part2; 注意，此时不需要加 struct 了</p><h4 id="1533结构作为参数和返回值"><a class="anchor" href="#1533结构作为参数和返回值">#</a> 15.3.3. 结构作为参数和返回值</h4><p>作为参数，例子</p><pre><code>                            void print\_part (struct part p)&#123;
+                                printf(&quot;%d&quot;,p.number);
+                                printf(&quot;%s&quot;,p.char);
+                                printf(&quot;%d&quot;,p.on\_hand);
+                            &#125;
+                                            
+</code></pre><p>作为返回值，例子</p><pre><code>                struct part build\_part (int number,char\*name,int on\_hand)&#123;
+                            struct part p;
+                            p.number=number;
+                            strcpy(p.name,name);
+                            p.on\_hand=on\_hand;
+                            return p;
+                        &#125;
+                                        
+</code></pre><p>给函数传递结构和从函数返回结构都需要生成结构中所有成员的副本，这样会加大程序的系统开销。所以我们有时可以采用传递指向结构的指针来代替传递结构，也可以使函数返回指向结构的指针来代替返回实际的结构</p><h4 id="1534复合字面量"><a class="anchor" href="#1534复合字面量">#</a> 15.3.4. 复合字面量</h4><p>一般来说，复合字面量包括用圆括号括住的类型名后后续的初始化器，如果复合量代表一个结构，类型名可以是在结构标签的前面加上 struct 或者 typedef 名，一个复合字面量的初始化器部分可以包含指示器，如 print_part ((struct part){.on_hand=10,.name=&quot;dog&quot;,.number=3445}); 复合字面量不会提供完全的初始化，所以任何为初始化的成员默认为 0</p><h4 id="1535匿名结构"><a class="anchor" href="#1535匿名结构">#</a> 15.3.5. 匿名结构</h4><p>结构或者联合的成员也可以是另一个没有名字的结构，如果一个结构或者联合包含了这样的成员：没有名称；被声明为结构类型，但是只有成员列表而没有标记。则这个成员就是一个匿名结构，如</p><pre><code>                struct t &#123; 
+                    int i; 
+                    struct &#123;
+                        char c;
+                        float f;
+                    &#125;;
+                &#125; 
+                union u &#123;
+                    int i;
+                    struct &#123;
+                        char c;
+                        float f;
+                    &#125;;
+                &#125;;
+                        
+</code></pre><p>访问匿名结构里面的成员。若某个匿名结构 s 是结构或者联合 X 的成员。那么 s 的成员就可被当作是 X 的成员，采用 X. 成员名就可以访问</p><p>尽管匿名结构的成员被当作隶属于包含该结构的上层结构的成员，但它的初始化器依然必须采用被花括号包围的形式。如 struct t {char c;struct {int x;};}; struct t t={'x',{1}};</p><h3 id="153嵌套数组与结构"><a class="anchor" href="#153嵌套数组与结构">#</a> 15.3. 嵌套数组与结构</h3><p>结构和数组的组合没有限制。数组可以将结构作为元素，结构也可包含数组和结构作为成员。</p><h4 id="1531嵌套的结构"><a class="anchor" href="#1531嵌套的结构">#</a> 15.3.1. 嵌套的结构</h4><p>把一种结构嵌套在另一种结构当中是经常使用的。如</p><pre><code>                        struct person\_name &#123; 
+                            char first\[FIRST\_NAME\_LEN+1\];
+                            char middle\_initial;
+                            char last\[LAST\_NAME\_LEN+1\];
+                        &#125;;
+</code></pre><p>可以用结构 person_name 作为更大结构的一部分内容，如 ```<br>struct student{<br>struct person_name name;<br>int id,age;<br>char sex;<br>}student1,student2;</p><pre><code>访问student1的名，中间名或姓需要应用两次..运算符。strcpy(student1.name.first,&quot;Fred&quot;);这样的好处就是可以把名字作为一个数据单元来处理，要用到名字时只需调用一次。
+
+#### 15.3.2.结构数组
+
+结构数组可用作简单的数据库使用，struct part inventory\[100\];为了访问数组中的某个成员，可以采用使用取下标的方式,可以写成 print\_part(inventory\[i\]);访问结构part内的成员要求结合使用取下标和成员选择。为了给inventory\[i\]中的成员number赋值883，可以写成inventory\[i\].number=883;访问part里面的name里面的单个字符要求先取下标(选择特定的零件)，然后选择成员(选择成员name)，再取下标(选择零件名称中的字符)，如果想要一个零件的名字变为空字符串，那么可以这样做 inventory\[i\],name\[0\]='\\0';
+
+#### 15.3.3.结构数组的初始化
+
+初始化数组与初始化多维数组的方法非常相似，每个结构都拥有自己的带有花括号的初始化器，数组的初始化器简单的在结构初始化器的外围括上另一对花括号。初始化数组的原因是打算把它当作数据库，所以我们初始化就直接采用一个一个的写，
+
+### 15.4.联合
+
+联合是由一个或多个成员构成的，而且这些成员可能具有不同的类型，但是编译器只为联合中最大的成员分配足够的内存空间，联合内的成员在这个空间内彼此覆盖，这样的结构是给一个成员赋新值也会改变其他成员的值
+
+联合的声明与结构很相似，如 union &#123;int i;double d;&#125;u;,访问联合成员的方法和访问结构成员的方法相同，联合的性质和结构的性质几乎一样，可以用声明结构标记和类型的方法来声明联合的标记和类型，也可以用运算符=进行复制，也可以传递给函数，还可以由函数返回
+
+联合的初始化方式也和结构的初始化很相似，但是，只有联合的第一个成员才可以获得初始值，例如 union &#123;int i;double d;&#125;u=&#123;0&#125;;注意，花括号是必须的，花括号内的表达式必须是常量。
+
+指示器也可以在联合中使用
+
+#### 15.4.1.用联合来节省空间
+
+如下述实例:要存储三种类型的东西，图书:书名，作者，页数；杯子:设计；衬衫:设计，可选颜色，可选尺码。如果用结构的话，上述提到的每一个属性都要声明，但不同种类的成员所拥有的属性不一样，且一次只能表示一个成员，那么就会造成存储空间浪费，所以我们可以采用联合，如下:
+
+</code></pre><pre><code>                    struct catalog\_item &#123;
+                        int stock\_number;
+                        double price;
+                        int item\_type;
+                        union &#123;
+                            struct &#123;
+                                char title\[TITLE\_LEN+1\];
+                                char author \[AUTHOR\_LEN+1\];
+                                int num\_pages;
+                            &#125;book;
+                            struct &#123;
+                                char design\[DESIGN\_LEN+1\];
+                            &#125;mug;
+                            struct &#123;
+                            char design\[DESIGN\_LEN+1\];
+                            int colors;int sizes;
+                            &#125;shirt;
+                        &#125;item;
+                    &#125;;
+</code></pre><pre><code>
+注意，联合(名为item)是结构catalog\_item的成员，而结构book，mug和shirt则是联合item的成员，如果c是表示图书的结构catalog\_item，那么可以用下列方法显示图书的名称: printf(&quot;%s&quot;,c.item.book.title);
+
+当联合的两个或多个成员是结构，而这些结构最初的一个或多个成员是相匹配的(这些成员的顺序应该相同，类型也要兼容，但名字可以不一样。)如果当前某个结构有效，则其他结构中的匹配成员也有效。如上述的mug和shirt都有design，如果给其中的一个design赋值，strcpy(c.item.mug.design,&quot;cats&quot;);,另一个结构中的design成员也会被定义，并且具有相同的值
+
+#### 15.4.3.为联合添加“标记字段”
+
+因为在联合中为变量赋值也会改变其他的变量的值，所以我们无法知道一个变量中最后到底储存的那个值，此时我们需要在代码中加入一段类似判别式的代码来判断变量的值，如以下实例:
+
+</code></pre><pre><code>                #define INT\_KIND 0
+                #define DOUBLE\_KIND 1
+                typeof struct &#123;
+                    int kind;
+                    union &#123;
+                        int i;
+                        double d;
+                    &#125; u;
+                &#125; Number;
+</code></pre><pre><code>
+每次给u的成员赋值时也会改变kind，从而提示修改的是u的哪个成员，当后面要找回number型变量里面的数时，用一个if判断kind的值就可以了，每次对来联合的成员进行赋值，都要改变标记字段的内容
+
+#### 15.4.4.匿名联合
+
+结构或联合的成员也可以是一个没有名字的联合，如果一个结构或联合包含了这样的成员:1.没有名称:2.被声明为联合类型，但是只有成员列表而没有标记:则这个成员就是一个匿名联合，如 union &#123; int i; union &#123;char c; float f;&#125;;&#125;;，如果某个匿名联合u是结构或者联合x的成员，则u的成员被当作x的成员
+
+### 15.5.枚举
+
+C语言为具有少量可能值的变量提供了一种专用类型，枚举类型，它是一种值由程序员列出的类型，而且程序员必须为每个值命名(枚举常量)，枚举常量的名字必须不同于作用域范围内声明的其他标识符，且枚举常量具有作用域
+
+#### 15.5.1.枚举标记和类型名
+
+与结构和联合类似，可以通过声明标记的方法，或者使用typeof来创建独一无二的类型名，如enum Bool &#123; FALSE, TRUE&#125;;或者 typeof enum &#123;FALSE, TRUE&#125; Bool;
+
+#### 15.5.2.枚举作为整数
+
+C语言会把枚举常量和变量当作整数来处理，默认按顺序 0 1 2 3 ... 我们也可以为枚举常量自由选择不同的值，在声明枚举时指明这些数，如 enum suit &#123; CLUBS=1, DIAMONDS=2, HEARTS=3, SPADES=4&#125;s;枚举常量的值可以是任何整数，也可以不按顺序列出，两个或多个枚举常量具有相同的值,所以在结构中声明枚举的类型时可以把枚举声明为int，这适用于如模拟处一局棋盘，棋子总共的类型就几种，适用于枚举，然后棋子在棋盘上的排列有一定的规律，这时如果一个一个的赋值是比较麻烦的，如果采用整数数组来给每个棋格赋值是比较方便的。
+
+C语言允许把枚举与普通整数进行混合，如int i =DIAMONDS；(此时i等于2)；s=1；(s等于CLUBS)；s++(s等于DIAMONDS)；i=s+2;(i等于4)；编译器会把s作为整型变量来处理，而CLUBS等只是数1，2，3，4的名字而已
+
+#### 15.5.3.用枚举声明“标记字段”
+
+用枚举解决15.4中遇到的问题是非常合适的，用来确定联合中最后一个被赋值的成员。例如，在结构number中，可以把成员kind声明为枚举而不是int:
+
+</code></pre><pre><code>                typeof struct &#123;
+                    enum &#123;INT\_KIND, DOUBLE\_KIND&#125; kind;
+                    union &#123;
+                        int i;
+                        double d;
+                    &#125; u;
+                &#125;Number;
+</code></pre><pre><code>
+这种新结构和旧结构的用法完全一样，这样做阐明了kind的含义，且kind也只有两种类型。
+
+### 15.6.Tips
+
+结构作为返回值时，函数的声明要用struct part(提前声明好的结构，这为它的结构名)，然后函数里面要再声明一个结构，作为返回的结构
+
+结构中运用枚举时一样，可现在外部把枚举类型声明好，然后在结构里面声明枚举变量就好，结构为 enum 类型名 变量名
+
+## 16.指针的高级应用
+
+### 16.1.动态存储分配
+
+动态存储分配指在程序执行期间分配内存单元的能力，动态存储分配主要用于字符串，数组和结构
+
+#### 16.1.1.内存分配函数
+
+为了动态的分配存储空间，需要调用三种内存分配函数的一种，这些函数都是声明在&lt;stdlib.h&gt;里的
+
+malloc函数——分配内存块，但是不对内存块进行初始化
+
+calloc函数——分配内存块，并且对内存块进行清零
+
+realloc函数——调整先前分配的内存块大小
+
+因为函数无法知道计划存储在内存块里的数据是什么类型的，所以函数会返回void\*类型的值，这个类型的值代表&quot;通用指针&quot;，它本质上只是内存地址
+
+#### 16.1.2.空指针
+
+当函数无法找到我们需要大小的内存块时，函数会返回空指针，空指针是不指向任何地方的指针，这是一个区别于所有有效指针的特殊值，在把函数的返回值存储到指针变量中后，需要判断该指针是否为空指针
+
+空指针用名为null的宏表示，可以用如下的方法测试是否为空指针 if(p=malloc(1000)==NULL)，在C语言中，指针测试真假的方法与数的测试一样，所以，所以非空指针都为真，只有空指针为假，所以还可以采用以下的测试方法 p=NULL if(!p)
+
+### 16.2.动态分配字符串
+
+#### 16.2.1.使用malloc函数为字符串分配内存
+
+malloc函数具有以下原型 void\*malloc(size\_t size),malloc函数分配size字节的内存块，并且返回指向该内存块的指针，除了分配很大的内存块，其余情况下可以把size当作普通整数
+
+为n个字符的字符串分配内存空间，可以写成p=malloc(n+1);这里的p是char\*类型变量(实际参数为n+1而不是n，这就为空字符留出了空间)，在返回指针时会把通用指针转换为char\*类型，而不需要强制转换
+
+因为使用malloc函数未把内存初始化，所以p指向有n+1个字符的未初识化的数组，对字符数组的初始化可以用strcpy
+
+#### 16.2.2.在字符串函数中使用动态存储分配
+
+运用实例：如想要一个函数返回两个字符连在一起的字符，而又不改变两者中的原字符。便可以用动态存储分配，给一个char\* malloc一个长度为两个字符串长度之和再加一的内存，然后再分别把两个字符串strcat给char\*就可以了，其中还可以再判断一下给char\* malloc之后返回的是否为一个空指针
+
+#### 16.2.3.动态分配字符串数组
+
+把字符串存储再二维数组中会浪费空间，所以我们可以建立一个指向字面串的指针的数组。这样就可以节约空间，且操作起来也更方便
+
+### 16.3.动态分配数组
+
+#### 16.3.1.使用malloc函数为数组分配存储空间
+
+在分配空间时，我们需要用sizeof来计算出每个元素所需要的空间数量
+
+假设正在编写的程序需要n个整数构成的数组，这里的n可以在程序执行期间计算出来，首先需要声明指针变量 int \*a；
+
+一旦n的值已知，就让程序调用malloc函数为数组分配存储空间
+
+a=malloc(n\*sizeof(int))
+
+一旦a指向动态分配的内存块，就可以忽略a是指针的事实，可以把他用作数组的名字。
+
+#### 16.3.2.calloc函数
+
+calloc函数的原型为 void\*calloc(size\_t nmemb, size\_t size)，calloc函数为nmemb个元素的数组分配内存空间，其中每个元素的长度都是size字节，在分配了内存之后，calloc函数将为数组进行初始化。通过调用一个以1作为第一个实际参数的calloc函数，可以为任何类型的数据分配空间
+
+#### 16.3.3.realloc
+
+为数组分配完内存后，可能会发现数组过大或过小，realloc函数可以调整数组的大小使更适合需要 函数原型为 void\*realloc(void\*ptr,size\_t size)
+
+当调用realloc函数时，ptr必须指向先前通过malloc，calloc或realloc的调用获得的内存块，size表示内存块的新尺寸，虽然realloc函数不要求ptr指向正在用作数组的内存，但实际上通常是这样的
+
+几条关于realloc函数的规则：1.当扩展内存块时，realloc函数不会对添加内存块的字节进行初始化；2.如果realloc函数不能按要求扩大内存块，那么它会返回空指针，并且原有的内存块里的数据不会发生变化；3.如果realloc函数被调用时以空指针作为第一个实际参数，那么它的行为就像malloc函数一样(作用一样)；4.如果realloc函数被调用时以0作为第二个实际参数，那么它会释放内存块
+
+如果realloc函数无法扩大内存(因为内存块后面的字节已经用于其他目的)，realloc函数会在别处分配新的内存块，然后把旧块中的内容复制到新快中，注意，一旦realloc函数返回，请一定要对指向内存块的所有指针进行更新，因为realloc函数可能会使内存块移动到其他地方
+
+### 16.4.释放存储空间
+
+malloc函数和其他内存分配函数所获得的内存块都来自一个叫作堆的存储池，过于频繁的调用这些函数可能会耗尽堆，导致这些函数返回空指针
+
+对程序而言，不可再访问的内存块被称为垃圾，留有垃圾的程序存在内存泄露现象，一些语言提供垃圾收集器用于垃圾的自动定位和回收，C语言没有，相反，每个c程序负责回收各自的垃圾，方法是调用free函数来释放不需要的内存
+
+#### 16.4.1.free函数
+
+原型为 void free(void \*ptr)
+
+使用free函数很容易，只需要简单地把指向不需要的内存块的指针传递给free函数就可以了
+
+注意：free函数的实际参数必须是先前有内存分配函数返回的指针
+
+#### 16.4.2.悬空指针问题
+
+虽然free函数允许收回不再需要的内存，但是使用此函数会导致一个新的问题：悬空指针；调用free函数会释放p指向的内存块，但是不会改变p本身,此时p就单纯是一个指针了
+
+### 16.5.链表
+
+链表是由一连串的结构(称为节点)组成的，每个结点都包含指向链中下一个结点的指针,链表中的最后一个结点包含一个空指针，链表可以根据我们的需要扩大和缩小
+
+#### 16.5.1.声明结构类型
+
+为了建立链表，首先需要一个表示表中单个结点的结构；如下述实例，先假设结点只包含一个整数(即结点的数据)和指向下一个结点的指针，下面是代码 struct node &#123; int value;struct node\*next;&#125;注意，成员next有 struct node\*类型，这就意味着它能存储一个指向node结构的指针
+
+现在已经声明了node结构，还需要记录表开始的位置，话句话说，需要有一个始终指向表中第一个结点的变量，这里命名为first struct node\*first -NULL 把first初始化为NULL表明链表初识为空
+
+#### 16.5.2.创建结点
+
+在构建链表时，需要逐个创建结点，并且把生成的每个结点加入到链表中，创建链表包括三个步骤
+
+1，为结点分配内存单元
+
+为了创建结点，需要一个变量临时指向该结点(直到该结点插入到链表为止)，设此变量为new\_node； struct node\*new\_node; 我们用malloc函数为新结点分配内存空间，并且把返回值保存在new\_node中：new\_node=malloc(sizeof(struct node))；现在new\_node指向了一个内存块，且内存块正好能放下一个node结构
+
+注意：传给sizeof的是待分配的类型的名字，而不是指向此类型的指针的名字
+
+2.把数据存储到结点中
+
+把数据存储到新结点的成员value中：(\*new\_node).value=10；
+
+为了访问结点的成员value，可以采用间接寻址符\*，然后用选择运算符.。在\*new\_node两边的圆括号必不可少
+
+利用指针访问结构中的成员是很普遍的，一串C语言专门提供了一种运算符，此运算符称为右箭头选择器，它是由一个减号跟着一个&gt;组成的，利用-&gt;可以编写语句 new\_node-&gt;value=10;来代替上面的赋值语句，这个运算符先对new\_node间接寻址以定位所指向的结构，然后再选择结构的成员value
+
+由于上述运算符产生左值，所以可以在任何允许普通变量的地方使用它 ，再scanf调用中也很常见，如scanf(“%d”，&amp;new\_node-&gt;value)，注意，尽管new\_node是一个指针，运算符&amp;任然是需要的，如果没有运算符&amp;，就会把new\_node-&gt;value的值传递给scanf函数，而这个值是int类型
+
+3.把结点插入到链表中
+
+如果new\_node正指向要插入的结点，并且first正指向链表中的首结点，那么为了把结点插入链表将需要两条语句。首先，修改结点的成员next，使其指向先前再链表开始处的结点：new\_node-&gt;next=firstt;接下来，使first指向新结点；first=new\_node
+
+![](../images/笔记截图/微信图片_20211218224337.jpg)
+
+#### 16.5.5.搜索结点
+
+使用指针变量来搜索链表中的结点，代码 for(p=first;p!=NULL;p=p-&gt;next),赋值表达式p=p-&gt;next使指针p从一个结点移动到下一个结点
+
+现在来编写一个函数来搜索链表中的整数n
+
+</code></pre><pre><code>                struct node\*search\_list(struct node\*list,int n)&#123;
+                    struct node\*p;
+                    for(p=list;p!=NULL;p=p-&gt;next)&#123;
+                        if(p-&gt;value==n)&#123;
+                            return p;
+                        &#125;
+                    &#125;
+                    return NULL;
+                &#125;
+</code></pre><pre><code>
+当然，还有很多方法编写以上函数，如把变量p换成list，用list自身来跟踪当前结点，因为list是原始链表指针的副本，所以在函数内改变它不会有任何的损失
+
+#### 16.5.6.从链表中删除结点
+
+删除结点也包含三个步骤：
+
+1.定位要删除的结点
+
+2.改变前一个结点，从而使它绕过删除结点
+
+3.调用free函数收回删除结点占用的内存空间
+
+这里不能使用上述的搜索结点的方法，因为在步骤2中我们还需要前一个结点，所以这里我们采用追踪指针方法；在第一步搜索链表时，保留一个指向前一个节点的指针，还有指向当前结点的指针，如果list指向待搜索的链表，并且n是要删除的整数，那么下列循环就可以实现第一步
+
+指向前一个结点的指针(pre)，指向当前结点的指针(cur)。
+
+</code></pre><pre><code>        for(cur=list,prev=NULL;
+        cur!=NULL&amp;&amp;cur-&gt;value!=n;prev=cur,cur=cur-&gt;next);
+</code></pre><pre><code>
+然后执行第二步绕过操作。
+
+</code></pre><pre><code>                prev-&gt;next=cur-&gt;next;
+</code></pre><pre><code>
+使前一个结点中的指针指向了当前结点后面的结点
+
+现在执行第三步，释放当前结点占用的内存
+
+</code></pre><pre><code>                free(cur);
+</code></pre><pre><code>
+#### 16.5.7.有序列表
+
+如果链表的结点是有序的(按结点中的数据排序)，则称该链表为有序链表</code></pre></div><footer><div class="meta"><span class="item"><span class="icon"><i class="ic i-calendar-check"></i> </span><span class="text">更新于</span> <time title="修改时间：2022-05-12 15:28:39" itemprop="dateModified" datetime="2022-05-12T15:28:39+08:00">2022-05-12</time></span></div><div class="reward"><button><i class="ic i-heartbeat"></i> 赞赏</button><p>请我喝[茶]~(￣▽￣)~*</p><div id="qr"><div><img data-src="/images/wechatpay.png" alt="Greg yang 微信支付"><p>微信支付</p></div><div><img data-src="/images/alipay.png" alt="Greg yang 支付宝"><p>支付宝</p></div><div><img data-src="/images/paypal.png" alt="Greg yang 贝宝"><p>贝宝</p></div></div></div><div id="copyright"><ul><li class="author"><strong>本文作者： </strong>Greg yang <i class="ic i-at"><em>@</em></i></li><li class="link"><strong>本文链接：</strong> <a href="https://github.com/Greg267/C%E8%AF%AD%E8%A8%80/" title="C 语言">https://github.com/Greg267/C语言/</a></li><li class="license"><strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！</li></ul></div></footer></article></div><div class="post-nav"><div class="item left"><a href="/hello-world/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;008qflI6ly8h25g8wfjy3j308c04tmx2.jpg" title="Hello World"><span class="type">上一篇</span> <span class="category"><i class="ic i-flag"></i></span><h3>Hello World</h3></a></div><div class="item right"></div></div><div class="wrap" id="comments"></div></div><div id="sidebar"><div class="inner"><div class="panels"><div class="inner"><div class="contents panel pjax" data-title="文章目录"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#7%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">7. 基本数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#71%E6%95%B4%E5%9E%8B"><span class="toc-number">1.1.</span> <span class="toc-text">7.1. 整型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#72%E6%B5%AE%E7%82%B9%E5%9E%8B"><span class="toc-number">1.2.</span> <span class="toc-text">7.2. 浮点型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%AE%E7%82%B9%E5%9E%8B%E5%B8%B8%E9%87%8F"><span class="toc-number">1.2.1.</span> <span class="toc-text">浮点型常量</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#73%E5%AD%97%E7%AC%A6%E5%9E%8B"><span class="toc-number">1.3.</span> <span class="toc-text">7.3. 字符型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#a%E8%BD%AC%E4%B9%89%E5%BA%8F%E5%88%97"><span class="toc-number">1.3.1.</span> <span class="toc-text">a. 转义序列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#b%E8%AF%BB%E5%86%99%E5%AD%97%E7%AC%A6"><span class="toc-number">1.3.2.</span> <span class="toc-text">b. 读写字符</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#74%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.4.</span> <span class="toc-text">7.4. 类型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#a%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.4.1.</span> <span class="toc-text">a. 隐式转换</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#b%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.4.2.</span> <span class="toc-text">b. 强制类型转换</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#75%E7%B1%BB%E5%9E%8B%E5%AE%9A%E4%B9%89"><span class="toc-number">1.5.</span> <span class="toc-text">7.5. 类型定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#76sizeof%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.6.</span> <span class="toc-text">7.6.sizeof 运算符</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8%E6%95%B0%E7%BB%84"><span class="toc-number">2.</span> <span class="toc-text">8. 数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#81%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84"><span class="toc-number">2.1.</span> <span class="toc-text">8.1. 一维数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#82%E6%95%B0%E7%BB%84%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">2.2.</span> <span class="toc-text">8.2. 数组的初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#83%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84"><span class="toc-number">2.3.</span> <span class="toc-text">8.3. 二维数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#84%E5%AD%97%E7%AC%A6%E6%95%B0%E7%BB%84"><span class="toc-number">2.4.</span> <span class="toc-text">8.4. 字符数组</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9%E5%87%BD%E6%95%B0"><span class="toc-number">3.</span> <span class="toc-text">9. 函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#91%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E8%B0%83%E7%94%A8"><span class="toc-number">3.1.</span> <span class="toc-text">9.1. 函数的定义和调用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#911%E5%87%BD%E6%95%B0%E6%9E%84%E9%80%A0"><span class="toc-number">3.1.1.</span> <span class="toc-text">9.1.1 函数构造</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#922%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8"><span class="toc-number">3.1.2.</span> <span class="toc-text">9.2.2 函数调用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#92%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E5%92%8C%E5%AE%9E%E9%99%85%E5%8F%82%E6%95%B0"><span class="toc-number">3.2.</span> <span class="toc-text">9.2. 函数声明和实际参数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#921%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E"><span class="toc-number">3.2.1.</span> <span class="toc-text">9.2.1. 函数声明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#922%E5%AE%9E%E9%99%85%E5%8F%82%E6%95%B0"><span class="toc-number">3.2.2.</span> <span class="toc-text">9.2.2. 实际参数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#93%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E5%92%8C%E7%A8%8B%E5%BA%8F%E7%BB%88%E6%AD%A2"><span class="toc-number">3.3.</span> <span class="toc-text">9.3. 函数返回和程序终止</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#931%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E"><span class="toc-number">3.3.1.</span> <span class="toc-text">9.3.1. 函数返回</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#932%E7%A8%8B%E5%BA%8F%E7%BB%88%E6%AD%A2"><span class="toc-number">3.3.2.</span> <span class="toc-text">9.3.2. 程序终止</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#94%E5%87%BD%E6%95%B0%E9%80%92%E5%BD%92"><span class="toc-number">3.4.</span> <span class="toc-text">9.4. 函数递归</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84%E5%92%8C%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">4.</span> <span class="toc-text">10. 程序结构和变量作用域</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#101%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="toc-number">4.1.</span> <span class="toc-text">10.1. 局部变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1011%E9%9D%99%E6%80%81%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="toc-number">4.1.1.</span> <span class="toc-text">10.1.1. 静态局部变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1012%E5%BD%A2%E5%BC%8F%E5%8F%82%E6%95%B0"><span class="toc-number">4.1.2.</span> <span class="toc-text">10.1.2. 形式参数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#102%E5%A4%96%E9%83%A8%E5%8F%98%E9%87%8F"><span class="toc-number">4.2.</span> <span class="toc-text">10.2. 外部变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#103%E7%A8%8B%E5%BA%8F%E5%9D%97"><span class="toc-number">4.3.</span> <span class="toc-text">10.3. 程序块</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#104%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">4.3.1.</span> <span class="toc-text">10.4. 作用域</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#105%E6%9E%84%E5%BB%BAc%E7%A8%8B%E5%BA%8F"><span class="toc-number">4.3.2.</span> <span class="toc-text">10.5. 构建 C 程序</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11%E6%8C%87%E9%92%88"><span class="toc-number">5.</span> <span class="toc-text">11. 指针</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#111%E6%8C%87%E9%92%88%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">5.1.</span> <span class="toc-text">11.1. 指针的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1111%E5%8F%96%E5%9D%80%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E9%97%B4%E6%8E%A5%E5%AF%BB%E5%9D%80%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">5.1.1.</span> <span class="toc-text">11.1.1. 取址运算符和间接寻址运算符</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#112%E6%8C%87%E9%92%88%E7%94%A8%E5%81%9A%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E4%B8%8E%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-number">5.2.</span> <span class="toc-text">11.2. 指针用做函数参数与返回值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#113%E6%8C%87%E9%92%88%E7%9A%84%E7%AE%97%E6%95%B0%E8%BF%90%E7%AE%97"><span class="toc-number">5.3.</span> <span class="toc-text">11.3. 指针的算数运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#114%E6%8C%87%E9%92%88%E7%94%A8%E4%BA%8E%E6%95%B0%E7%BB%84%E5%A4%84%E7%90%86"><span class="toc-number">5.4.</span> <span class="toc-text">11.4. 指针用于数组处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#115%E7%94%A8%E6%95%B0%E7%BB%84%E5%90%8D%E4%BD%9C%E4%B8%BA%E6%8C%87%E9%92%88"><span class="toc-number">5.5.</span> <span class="toc-text">11.5. 用数组名作为指针</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#115%E6%8C%87%E9%92%88%E4%BA%8E%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84"><span class="toc-number">5.6.</span> <span class="toc-text">11.5. 指针于多维数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#116%E6%8C%87%E9%92%88%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8"><span class="toc-number">5.7.</span> <span class="toc-text">11.6. 指针实际应用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">6.</span> <span class="toc-text">12. 字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#121%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%AD%97%E9%9D%A2%E9%87%8F"><span class="toc-number">6.1.</span> <span class="toc-text">12.1. 字符串字面量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#122%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8F%98%E9%87%8F"><span class="toc-number">6.2.</span> <span class="toc-text">12.2. 字符串变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#123%E8%AF%BB%E5%86%99%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">6.3.</span> <span class="toc-text">12.3. 读写字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#124%E4%BD%BF%E7%94%A8c%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%BA%93"><span class="toc-number">6.4.</span> <span class="toc-text">12.4. 使用 C 字符串库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#125%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E7%BB%84"><span class="toc-number">6.5.</span> <span class="toc-text">12.5. 字符串数组</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13%E9%A2%84%E5%A4%84%E7%90%86"><span class="toc-number">7.</span> <span class="toc-text">13. 预处理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#131%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E5%92%8C%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91"><span class="toc-number">7.1.</span> <span class="toc-text">13.1. 基本概念和条件编译</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1311%E5%AE%8F"><span class="toc-number">7.1.1.</span> <span class="toc-text">13.1.1. 宏</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1312%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">7.1.2.</span> <span class="toc-text">13.1.2.# 运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1313%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">7.1.3.</span> <span class="toc-text">13.1.3.## 运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1314%E5%AE%8F%E7%9A%84%E9%80%9A%E7%94%A8%E5%B1%9E%E6%80%A7"><span class="toc-number">7.1.4.</span> <span class="toc-text">13.1.4. 宏的通用属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1315%E5%AE%8F%E5%AE%9A%E4%B9%89%E4%B8%AD%E7%9A%84%E5%9C%86%E6%8B%AC%E5%8F%B7"><span class="toc-number">7.1.5.</span> <span class="toc-text">13.1.5. 宏定义中的圆括号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1316%E5%88%9B%E5%BB%BA%E8%BE%83%E9%95%BF%E7%9A%84%E5%AE%8F"><span class="toc-number">7.1.6.</span> <span class="toc-text">13.1.6. 创建较长的宏</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1317%E9%A2%84%E5%AE%9A%E4%B9%89%E5%AE%8F"><span class="toc-number">7.1.7.</span> <span class="toc-text">13.1.7. 预定义宏</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1318%E7%A9%BA%E7%9A%84%E5%AE%8F%E5%8F%82%E6%95%B0"><span class="toc-number">7.1.8.</span> <span class="toc-text">13.1.8. 空的宏参数</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14%E5%A4%A7%E5%9E%8B%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1"><span class="toc-number">8.</span> <span class="toc-text">14. 大型程序设计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#141%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83"><span class="toc-number">8.1.</span> <span class="toc-text">14.1. 编程规范</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#142%E7%BB%93%E6%9E%84%E5%8C%96%E8%AE%BE%E8%AE%A1"><span class="toc-number">8.2.</span> <span class="toc-text">14.2. 结构化设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#143%E5%A4%9A%E6%96%87%E4%BB%B6%E7%A8%8B%E5%BA%8F"><span class="toc-number">8.3.</span> <span class="toc-text">14.3. 多文件程序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15%E7%BB%93%E6%9E%84%E8%81%94%E5%90%88%E5%92%8C%E6%9E%9A%E4%B8%BE"><span class="toc-number">9.</span> <span class="toc-text">15. 结构，联合和枚举</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#151%E7%BB%93%E6%9E%84%E6%A6%82%E8%BF%B0%E5%A3%B0%E6%98%8E%E4%B8%8E%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">9.1.</span> <span class="toc-text">15.1. 结构概述，声明与初始化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1511%E7%BB%93%E6%9E%84%E5%8F%98%E9%87%8F%E7%9A%84%E5%A3%B0%E6%98%8E"><span class="toc-number">9.1.1.</span> <span class="toc-text">15.1.1. 结构变量的声明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1512%E7%BB%93%E6%9E%84%E5%8F%98%E9%87%8F%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">9.1.2.</span> <span class="toc-text">15.1.2. 结构变量的初始化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1513%E6%8C%87%E7%A4%BA%E5%99%A8"><span class="toc-number">9.1.3.</span> <span class="toc-text">15.1.3. 指示器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#152%E5%AF%B9%E7%BB%93%E6%9E%84%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-number">9.2.</span> <span class="toc-text">15.2. 对结构的操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#153%E7%BB%93%E6%9E%84%E7%B1%BB%E5%9E%8B"><span class="toc-number">9.3.</span> <span class="toc-text">15.3. 结构类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1531%E7%BB%93%E6%9E%84%E6%A0%87%E8%AE%B0%E7%9A%84%E5%A3%B0%E6%98%8E"><span class="toc-number">9.3.1.</span> <span class="toc-text">15.3.1. 结构标记的声明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1532%E7%BB%93%E6%9E%84%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-number">9.3.2.</span> <span class="toc-text">15.3.2. 结构类型的定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1533%E7%BB%93%E6%9E%84%E4%BD%9C%E4%B8%BA%E5%8F%82%E6%95%B0%E5%92%8C%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-number">9.3.3.</span> <span class="toc-text">15.3.3. 结构作为参数和返回值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1534%E5%A4%8D%E5%90%88%E5%AD%97%E9%9D%A2%E9%87%8F"><span class="toc-number">9.3.4.</span> <span class="toc-text">15.3.4. 复合字面量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1535%E5%8C%BF%E5%90%8D%E7%BB%93%E6%9E%84"><span class="toc-number">9.3.5.</span> <span class="toc-text">15.3.5. 匿名结构</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#153%E5%B5%8C%E5%A5%97%E6%95%B0%E7%BB%84%E4%B8%8E%E7%BB%93%E6%9E%84"><span class="toc-number">9.4.</span> <span class="toc-text">15.3. 嵌套数组与结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1531%E5%B5%8C%E5%A5%97%E7%9A%84%E7%BB%93%E6%9E%84"><span class="toc-number">9.4.1.</span> <span class="toc-text">15.3.1. 嵌套的结构</span></a></li></ol></li></ol></li></ol></div><div class="related panel pjax" data-title="系列文章"></div><div class="overview panel" data-title="站点概览"><div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><img class="image" itemprop="image" alt="Greg yang" data-src="/images/avatar.jpg"><p class="name" itemprop="name">Greg yang</p><div class="description" itemprop="description"></div></div><nav class="state"><div class="item posts"><a href="/archives/"><span class="count">2</span> <span class="name">文章</span></a></div></nav><div class="social"><a href="https://github.com/Greg267" title="https:&#x2F;&#x2F;github.com&#x2F;Greg267" class="item github"><i class="ic i-github"></i></a> <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS9tci15LTIwLTIxLTYx" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;mr-y-20-21-61"><i class="ic i-zhihu"></i></span> <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTYwNjE4NTYxMQ==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;606185611"><i class="ic i-cloud-music"></i></span> <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vNzcxNjkwNTc3MC9wcm9maWxlP3RvcG5hdj0xJnd2cj02" title="https:&#x2F;&#x2F;weibo.com&#x2F;7716905770&#x2F;profile?topnav&#x3D;1&amp;wvr&#x3D;6"><i class="ic i-weibo"></i></span></div><ul class="menu"><li class="item"><a href="/" rel="section"><i class="ic i-home"></i>首页</a></li><li class="item dropdown"><a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a><ul class="submenu"><li class="item"><a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a></li><li class="item"><a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a></li><li class="item"><a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a></li></ul></li><li class="item"><a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a></li></ul></div></div></div><ul id="quick"><li class="prev pjax"></li><li class="up"><i class="ic i-arrow-up"></i></li><li class="down"><i class="ic i-arrow-down"></i></li><li class="next pjax"></li><li class="percent"></li></ul></div></div><div class="dimmer"></div></div></main><footer id="footer"><div class="inner"><div class="widgets"><div class="rpost pjax"><h2>随机文章</h2><ul><li class="item"><div class="breadcrumb"></div><span><a href="/C%E8%AF%AD%E8%A8%80/" title="C语言">C语言</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/hello-world/" title="Hello World">Hello World</a></span></li></ul></div><div><h2>最新评论</h2><ul class="leancloud-recent-comment"></ul></div></div><div class="status"><div class="copyright">&copy; 2010 – <span itemprop="copyrightYear">2022</span> <span class="with-love"><i class="ic i-sakura rotate"></i> </span><span class="author" itemprop="copyrightHolder">Greg yang @ Greg yang</span></div><div class="count"><span class="post-meta-item-icon"><i class="ic i-chart-area"></i> </span><span title="站点总字数">21k 字</span> <span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="ic i-coffee"></i> </span><span title="站点阅读时长">19 分钟</span></div><div class="powered-by">基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<a href="https://github.com/amehime/hexo-theme-shoka">Shoka</a></div></div></div></footer></div><script data-config type="text/javascript">var LOCAL={path:"C语言/",favicon:{show:"（●´3｀●）やれやれだぜ",hide:"(´Д｀)大変だ！"},search:{placeholder:"文章搜索",empty:"关于 「 ${query} 」，什么也没搜到",stats:"${time} ms 内找到 ${hits} 条结果"},valine:!0,fancybox:!0,copyright:'复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',ignores:[function(e){return e.includes("#")},function(e){return new RegExp(LOCAL.path+"$").test(e)}]}</script><script src="https://cdn.polyfill.io/v2/polyfill.js"></script><script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script><script src="/js/app.js?v=0.2.5"></script></body></html>
